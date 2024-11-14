@@ -16,8 +16,8 @@ let package = Package(
     dependencies: [
         // In-House pakcages
         // .package(url: "https://gitlab.com/ido_r_demos/MNUtils.git", from:"0.0.2"),
-        .package(path: "../../MNUtils/MNUtils"),
-        .package(path: "../../DSLogger/"),
+        .package(path: "../../../MNUtils/MNUtils"),
+        .package(path: "../../../DSLogger/"),
     ],
     targets: [
         .target(
