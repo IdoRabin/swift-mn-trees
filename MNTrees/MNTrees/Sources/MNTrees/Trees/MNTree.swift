@@ -6,6 +6,9 @@
 //
 
 import Foundation
+
+public typealias MNTreeName = MNGraphName
+
 public enum MNTreeType: String, CaseIterable {
     // N-Nodes branching
     case NAryTree // N-ary tree, no balancing
@@ -25,6 +28,9 @@ public protocol MNTree : MNGraph {
     
     var config : any MNTreeConfig { get set }
     var treeKind : MNTreeType { get }
+    
+    // How to specialize an existing init or hide the super.init from the user (dev)?
+    init(name: MNTreeName, config: any MNTreeConfig)
 }
 
 public extension MNTree {

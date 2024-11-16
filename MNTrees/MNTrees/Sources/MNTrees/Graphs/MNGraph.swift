@@ -19,6 +19,8 @@ public protocol MNGraph : Sendable, Codable, Hashable {
     var name : MNGraphName? { get }
     
     var graphType : MNGraphType { get } // derived from config
+    
+    init(name: MNGraphName, config: any MNGraphConfig)
 }
 
 public extension MNGraph /* default implementations */ {
